@@ -1,0 +1,1 @@
+INPATH = "/Users/rupal/Documents/GitHub/Suicide-Methods-Switzerland/dataset/preprocessed.csv"
