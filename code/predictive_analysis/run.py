@@ -5,6 +5,11 @@ import config
 from prepare_data import prepare_train_data as prep_train
 from prepare_data import prepare_future_data as prep_future
 from models import decision_tree
+"""
+TODO: plot future predictions
+TODO: plot correlation matrix for features
+"""
+
 
 def run():
     # train model
