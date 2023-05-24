@@ -1,10 +1,23 @@
-INPATH = "/Users/rupal/Documents/GitHub/Suicide-Methods-Switzerland/dataset/preprocessed.csv"
-choose_col = ["year", "gender", "method", "total"]
 
+INPATH = "/Users/rupal/Documents/GitHub/Suicide-Methods-Switzerland/dataset/preprocessed.csv"
+
+# exp 1
+# OUTPATH = "/Users/rupal/Documents/GitHub/Suicide-Methods-Switzerland/dataset/future_all_ages.csv"
+# choose_col = ["year", "gender", "method", "total"]
+
+# exp 2
+# OUTPATH = "/Users/rupal/Documents/GitHub/Suicide-Methods-Switzerland/dataset/future_20_29_ages.csv"
+# choose_col = ["year", "gender", "method", "20 - 29"]
+
+# exp 3
+# OUTPATH = "/Users/rupal/Documents/GitHub/Suicide-Methods-Switzerland/dataset/total_all_ages.csv"
+# choose_col = ["year", "gender", "method", "total"]
+OUTPATH = "/Users/rupal/Documents/GitHub/Suicide-Methods-Switzerland/dataset/total_20_29_ages.csv"
+choose_col = ["year", "gender", "method", "20 - 29"]
 
 
 # future preds
-OUTPATH = "/Users/rupal/Documents/GitHub/Suicide-Methods-Switzerland/dataset/future_all_ages.csv"
+
 cols = ["year", "gender", "method"]
 data = [
     [2022, "Men", "poisoning"],

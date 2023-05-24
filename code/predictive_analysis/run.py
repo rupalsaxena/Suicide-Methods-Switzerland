@@ -4,21 +4,24 @@ import pandas as pd
 import config
 from prepare_data import prepare_train_data as prep_train
 from prepare_data import prepare_future_data as prep_future
-from models import decision_tree
-"""
-TODO: plot future predictions
-TODO: plot correlation matrix for features
-"""
+from models import model
 
 
 def run():
-    # train model
+    # get data
     X_train, X_test, Y_train, Y_test = prep_train(config)
-    model = decision_tree(X_train, X_test, Y_train, Y_test, scatter=True)
+
+    # train model
+    #model_ = model(X_train, X_test, Y_train, Y_test, scatter=True, model="RF", fit_full=True)
+    model_ = model(X_train, X_test, Y_train, Y_test, scatter=True, model="xgb", fit_full=True)
 
     # predict future
     X_pure, X_enc = prep_future(config)
-    y_pred = model.predict(X_enc)
+    y_pred = model_.predict(X_enc)
+
+    # enforcing minimum death = 0
+    minimum_value = 0.0
+    y_pred = np.maximum(y_pred, minimum_value)
 
     # write results in df
     df_future = X_pure

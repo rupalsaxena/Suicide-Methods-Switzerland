@@ -71,7 +71,7 @@ def pie_chart(path, gender, age):
     df_main = pd.read_csv(path)
 
     df_gender = df_main.loc[df_main["gender"]==gender]
-    #df_gender = df_gender.loc[df_gender["year"]>=2008]
+    df_gender = df_gender.loc[df_gender["year"]>2016]
 
     # total
     df_total = df_gender.loc[df_gender["method"]=="Totalsuicides"]
